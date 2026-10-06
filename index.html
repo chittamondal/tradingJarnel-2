@@ -9,28 +9,31 @@
 <body>
 
   <div class="container">
-    <h2>Trade Log Table</h2>
+    <div class="header">
+      <h2 class="tradeLogeTable">Trade Log Table</h2>
 
     <!-- input form for new trade -->
     <div class="form-container">
       <input type="date" id="date" placeholder="Date">
       <input type="text" id="day" placeholder="Day (e.g. Mon)">
-      <input type="time" id="time" placeholder="Time">
+      <input type="text" id="time" placeholder="SatupTime">
       <input type="text" id="entrytime" placeholder="Entry Time">
       <input type="text" id="band" placeholder="Band">
       <input type="text" id="rsi" placeholder="RSI">
       <input type="text" id="sl" placeholder="Stop Loss">
-      <input type="text" id="targetUnreached" placeholder="Unreached Target">
+      <input type="text" id="targetUnreached" placeholder="Loss/cose">
       <input type="text" id="target" placeholder="Target">
       
       <button id="btn">Add Trade</button>
     </div>
 
+    </div>
+    
     <!-- table -->
     <div class="table-responsive">
       <table>
         <thead>
-          <tr>
+          <tr class="tblerow-heading">
             <th>Date</th>
             <th>Day</th>
             <th>Time</th>
@@ -38,7 +41,7 @@
             <th>Band</th>
             <th>RSI</th>
             <th>SL</th>
-            <th>Target Unreached</th>
+            <th>Loss/cose</th>
             <th>Target</th>
             <th>Action</th>
           </tr>

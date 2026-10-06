@@ -10,6 +10,23 @@ body {
   padding: 20px;
 }
 
+.tradeLogeTable {
+  color: rgb(10, 244, 123);
+  text-transform: uppercase;
+  font-size: 32px;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
+.header {
+  border: 2px solid white;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 20px;
+  position:sticky;
+  top:0;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -28,9 +45,9 @@ h2 {
 .form-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 100px;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  
 }
 
 .form-container input {
@@ -40,7 +57,7 @@ h2 {
   flex: 1 1 120px;
   font-size: 14px;
   background-color: rgb(17, 16, 16);
-  color :white;
+  color: rgb(243, 227, 227);
 }
 
 #btn {
@@ -57,15 +74,22 @@ h2 {
   background-color: #218838;
 }
 
-/* Table Styles */
+/* ----------------------------------------------------
+   TABLE STYLES & STICKY HEADER FIX
+   ---------------------------------------------------- */
+
+/* ১. টেবিলের বাইরের কন্টেইনারে হাইট ও স্ক্রোল চালু করা হলো */
 .table-responsive {
-  overflow-x: auto;
+  max-height: 400px;      /* স্ক্রোল এরিয়া নির্ধারণ করে */
+  overflow-y: auto;       /* উপর-নিচে স্ক্রোল চালু করে */
+  overflow-x: auto;       /* পাশাপাশি স্ক্রোল চালু করে */
+  border: 1px solid #555;
+  border-radius: 4px;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
 }
 
 th, td {
@@ -73,21 +97,27 @@ th, td {
   padding: 10px;
   text-align: center;
   font-size: 14px;
-  color:white;
+  color: white;
 }
 
-th {
-  background-color: #007bff;
-  color: white;
+/* ২. Sticky Header Fix: top:0, z-index এবং background নির্দিষ্ট করা হয়েছে */
+.tblerow-heading th {
+  position: sticky;
+  top: 0;                   /* টেবিল স্ক্রোল করার সময় একদম ওপরে আটকে থাকবে */
+  background-color: #092037; /* কন্টেন্ট যেন লেখার পেছনে না দেখা যায় */
+  color: rgb(65, 245, 10);
+  z-index: 10;              /* ডাটার ওপরে ভাসিয়ে রাখার জন্য */
 }
 
 tr:nth-child(even) {
   background-color: #565555;
-  color :white;
+  color: rgb(247, 245, 245);
 }
-tr{
-  color:white;
+
+tr {
+  color: white;
 }
+
 /* Delete Button */
 .delete-btn {
   background-color: #ff4d4d;
