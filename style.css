@@ -82,6 +82,7 @@ th {
 
 tr:nth-child(even) {
   background-color: #565555;
+  color :white;
 }
 
 /* Delete Button */
